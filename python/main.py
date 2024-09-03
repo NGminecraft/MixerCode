@@ -1,7 +1,6 @@
 import logging
 from communication import Comms
 from cmd import CMD
-import asyncio
 
 def resetLogger():
     for i in ["debugLog.log", "log.log"]:
@@ -40,7 +39,7 @@ def main():
     logger.debug("Initializing")
     communicationClass = Comms()
     logger.info("Initialized Communication Class")
-    communicationClass.registerListener(reportInput, CMD("/ch/*/config/color"))
+    communicationClass.registerListener(reportInput, CMD("meters/01"))
     
     
 
