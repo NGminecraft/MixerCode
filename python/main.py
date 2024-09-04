@@ -1,6 +1,6 @@
 import logging
 from communication import Comms
-from cmd import CMD
+from utilClasses.cmd import CMD
 
 def resetLogger():
     for i in ["debugLog.log", "log.log"]:

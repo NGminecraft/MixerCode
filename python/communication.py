@@ -1,5 +1,5 @@
 import logging
-from cmd import CMD
+from utilClasses.cmd import CMD
 import threading
 from pythonosc import dispatcher
 from pythonosc import osc_server, udp_client, osc_message_builder
