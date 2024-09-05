@@ -21,19 +21,19 @@ class Status:
         self.valuesId = []
         for i in self.channels:
             self.values[i] = []
-        self.logger.info(f"Started tracking {len(self.channels)} channels")
+        self.track_channel_value("/ch/00/config/name", "Name")
+        
 
-    def track_channel_value(self, channel, cmd:str|CMD, id=None):
+    def track_channel_value(self, cmd:str, id=None):
         """If command is sent as string, use 00 to signify each channel"""
-        channel = format(channel(num=channel, width=2))
-        if type(cmd) is str:
-            cmd = CMD(cmd.replace("00", str(channel)), True)
         if not id:
             id = cmd.value
+        id += ": "
         for i in self.channels:
             self.values[i].append(0)
-            self.tracker_register(Item(i, self.value).listener_func, cmd)
+            self.tracker_register(Item(i, self.value).listener_func, CMD(cmd.replace("00", str(i)), True))
         self.valuesId.append(id)
+        self.logger.info(f"Started tracking the value of {id} for {len(self.get_tracked_channels_count())} channels")
             
     def get_tracked_items(self):
         return self.valuesID
