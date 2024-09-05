@@ -20,7 +20,7 @@ class Status:
         self.values = {}
         self.valuesId = []
         for i in self.channels:
-            self.values[i] = []
+            self.values[i] = [{}]
         self.track_channel_value("/ch/00/config/name", "Name")
         
 
@@ -30,8 +30,8 @@ class Status:
             id = cmd.value
         id += ": "
         for i in self.channels:
-            self.values[i].append(0)
-            self.tracker_register(Item(i, self.value).listener_func, CMD(cmd.replace("00", str(i)), True))
+            self.values[i][id].append(0)
+            self.tracker_register(Item(i, id, self.set_value).listener_func, CMD(cmd.replace("00", str(i)), True))
         self.valuesId.append(id)
         self.logger.info(f"Started tracking the value of {id} for {len(self.get_tracked_channels_count())} channels")
             
@@ -41,8 +41,8 @@ class Status:
     def get_tracked_items_count(self):
         return len(self.valuesId)
             
-    def set_value(self, channel, address, value):
-        self.values[channel] = value
+    def set_value(self, channel, key, address, value):
+        self.values[channel][key] = value
         
     def get_value_of_channel(self, channelValue:int|list[int]|None = None):
         if not channelValue:
