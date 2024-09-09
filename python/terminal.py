@@ -1,6 +1,7 @@
 from statusCache import Item
 import os
 import logging
+from KeyLogger import KeyLogger
 
 
 class Terminal:
@@ -12,10 +13,12 @@ class Terminal:
         
         self.logger = logging.getLogger("logger.main")
         
+        self.keyLogger = KeyLogger()
         
         self.infoClass = infoClass
         self.numChannels = infoClass.get_tracked_channels_count()
         self.numItems = infoClass.get_tracked_items_count()
+        print()
         
     def check_channels(self):
         if self.infoClass.get_tracked_channels_count() != self.numChannels:
