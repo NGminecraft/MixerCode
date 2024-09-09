@@ -42,10 +42,11 @@ def main():
     communicationClass = Comms()
     logger.info("Initialized Communication Class")
     communicationClass.registerListener(reportInput, CMD("meters/01"))
-    storageClass = Status(communicationClass.registerListener)
+    storageClass = Status(communicationClass.registerListener, 3)
     terminal = Terminal(storageClass)
-    terminal.update()
-    terminal.update()
+    while True:
+        terminal.update()
+    print()
     
     
 

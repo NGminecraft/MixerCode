@@ -22,7 +22,7 @@ class Terminal:
             self.numChannels = self.infoClass.get_tracked_channels_count()
         
     def update(self):
-        print(str(self.refreshToken+self.clearToken)*self.numItems) # Clears Old data
+        print(str(self.lineChange+self.clearToken)*(self.numItems)) # Clears Old data
         self.numItems = self.infoClass.get_tracked_items_count()
         self.check_channels()
         
@@ -32,11 +32,11 @@ class Terminal:
         ids = self.infoClass.get_tracked_items()
         
         full_list = []
-        for i in range(1, self.numChannels+1):
+        for j in ids:
             row_list = []
-            for j in ids:
+            for i in range(1, self.numChannels+1):
                 toAdd = f"{j}: {self.infoClass.get_value_of_channel(i, j)}"
                 row_list.append(toAdd+(' '*(width_per_channel-len(toAdd))))
             full_list.append("#".join(row_list))
-        print("\n".join(full_list))
+        print("\n".join(full_list), end="")
             
