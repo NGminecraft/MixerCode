@@ -1,6 +1,8 @@
 import logging
 from communication import Comms
 from utilClasses.cmd import CMD
+from statusCache import Status
+from terminal import Terminal
 
 def resetLogger():
     for i in ["debugLog.log", "log.log"]:
@@ -40,6 +42,10 @@ def main():
     communicationClass = Comms()
     logger.info("Initialized Communication Class")
     communicationClass.registerListener(reportInput, CMD("meters/01"))
+    storageClass = Status(communicationClass.registerListener)
+    terminal = Terminal(storageClass)
+    terminal.update()
+    terminal.update()
     
     
 

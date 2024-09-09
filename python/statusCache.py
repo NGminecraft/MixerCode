@@ -4,7 +4,7 @@ from utilClasses.cmd import CMD
 
 
 class Status:
-    def __init__(self, handler_register, num_channels:int|None, channels: list[int]|tuple|None = None):
+    def __init__(self, handler_register, num_channels:int|None=None, channels: list[int]|tuple|None = None):
         self.logger = logging.getLogger("logger.main")
         if not num_channels:
             self.channels = set(range(1, 17))
@@ -17,10 +17,11 @@ class Status:
         
         self.tracker_register = handler_register
             
+        # The way this is set up: {Channel Number:{id: value}}
         self.values = {}
         self.valuesId = []
         for i in self.channels:
-            self.values[i] = [{}]
+            self.values[i] = {}
         self.track_channel_value("/ch/00/config/name", "Name")
         
 
@@ -28,15 +29,14 @@ class Status:
         """If command is sent as string, use 00 to signify each channel"""
         if not id:
             id = cmd.value
-        id += ": "
         for i in self.channels:
-            self.values[i][id].append(0)
+            self.values[i][id] = 0
             self.tracker_register(Item(i, id, self.set_value).listener_func, CMD(cmd.replace("00", str(i)), True))
         self.valuesId.append(id)
-        self.logger.info(f"Started tracking the value of {id} for {len(self.get_tracked_channels_count())} channels")
+        self.logger.info(f"Started tracking the value of {id} for {self.get_tracked_channels_count()} channels")
             
     def get_tracked_items(self):
-        return self.valuesID
+        return self.valuesId
         
     def get_tracked_items_count(self):
         return len(self.valuesId)
@@ -44,11 +44,14 @@ class Status:
     def set_value(self, channel, key, address, value):
         self.values[channel][key] = value
         
-    def get_value_of_channel(self, channelValue:int|list[int]|None = None):
+    def get_value_of_channel(self, channelValue:int|list[int]|None = None, id:None|str = None):
         if not channelValue:
             return self.values.values()
         elif type(channelValue) is int:
-            return self.values[channelValue]
+            if not id:
+                return self.values[channelValue]
+            if id:
+                return self.values[channelValue][id]
         else:
             return [self.values[i] for i in channelValue]
         
@@ -57,5 +60,3 @@ class Status:
     
     def get_tracked_channels_count(self):
         return len(self.channels)
-             
-    

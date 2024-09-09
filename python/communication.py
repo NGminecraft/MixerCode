@@ -14,7 +14,7 @@ class Comms:
         self.server.serve()
         self.logger.info(f"Started server, setting up client side")
         ip = input("Enter the IP: ")
-        port = input("Enter the port")
+        port = input("Enter the port: ")
         try:
             self.client = udp_client.SimpleUDPClient(ip, int(port))
         except TypeError:

@@ -1,2 +1,4 @@
-(logger.main) 2024-08-29 19:24:03,669 --[INFO]-- Starting server on 0.0.0.0:8000
-(logger.main) 2024-08-29 19:24:03,670 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-09 12:21:58,881 --[INFO]-- Starting server on 0.0.0.0:8000
+(logger.main) 2024-09-09 12:21:58,881 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-09 12:22:01,032 --[INFO]-- Initialized Communication Class
+(logger.main) 2024-09-09 12:22:01,033 --[INFO]-- Started tracking the value of Name for 16 channels
