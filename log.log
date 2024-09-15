@@ -1,6 +1,6 @@
-(logger.main) 2024-09-10 13:29:52,174 --[INFO]-- Starting server on 0.0.0.0:8000
-(logger.main) 2024-09-10 13:29:52,174 --[INFO]-- Started server, setting up client side
-(logger.main) 2024-09-10 13:29:54,771 --[INFO]-- Initialized Communication Class
-(logger.main) 2024-09-10 13:29:54,772 --[INFO]-- Started tracking the value of Name for 3 channels
-(logger.main) 2024-09-10 13:29:54,772 --[ERROR]-- Envrionment errors, unable to start keylogger
-(logger.main) 2024-09-10 13:29:54,772 --[ERROR]-- Check that your running on a standard windows machine
+(logger.main) 2024-09-15 17:12:34,825 --[INFO]-- Starting server on 0.0.0.0:8000
+(logger.main) 2024-09-15 17:12:34,829 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-15 17:12:42,985 --[INFO]-- Initialized Communication Class
+(logger.main) 2024-09-15 17:12:42,987 --[INFO]-- Started tracking the value of Name for 3 channels
+(logger.main) 2024-09-15 17:12:42,987 --[ERROR]-- Envrionment errors, unable to start keylogger
+(logger.main) 2024-09-15 17:12:42,988 --[ERROR]-- Check that your running on a standard windows machine

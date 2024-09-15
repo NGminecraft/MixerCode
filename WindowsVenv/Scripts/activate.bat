@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\grahanic001\Documents\MixerCode\WindowsVenv
+set VIRTUAL_ENV=C:\Users\minec\OneDrive\Documents\MixerCode\WindowsVenv
 
 if not defined PROMPT set PROMPT=$P$G
 
