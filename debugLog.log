@@ -1,15 +1,14 @@
-(logger.main) 2024-09-15 17:44:42,300 --[DEBUG]-- Initialized Logger
-(logger.main) 2024-09-15 17:44:42,301 --[DEBUG]-- Initializing
-(logger.main) 2024-09-15 17:44:42,303 --[INFO]-- Starting server on 0.0.0.0:8000
-(logger.main) 2024-09-15 17:44:42,305 --[INFO]-- Started server, setting up client side
-(logger.main) 2024-09-15 17:44:51,187 --[INFO]-- Initialized Communication Class
-(logger.main) 2024-09-15 17:44:51,188 --[DEBUG]-- Created a (Input = True) cmd running meters/01
-(logger.main) 2024-09-15 17:44:51,188 --[DEBUG]-- Added listener to meters/01
-(logger.main) 2024-09-15 17:44:51,188 --[DEBUG]-- Created a (Input = True) cmd running /ch/1/config/name
-(logger.main) 2024-09-15 17:44:51,188 --[DEBUG]-- Added listener to /ch/1/config/name
-(logger.main) 2024-09-15 17:44:51,188 --[DEBUG]-- Created a (Input = True) cmd running /ch/2/config/name
-(logger.main) 2024-09-15 17:44:51,188 --[DEBUG]-- Added listener to /ch/2/config/name
-(logger.main) 2024-09-15 17:44:51,188 --[DEBUG]-- Created a (Input = True) cmd running /ch/3/config/name
-(logger.main) 2024-09-15 17:44:51,189 --[DEBUG]-- Added listener to /ch/3/config/name
-(logger.main) 2024-09-15 17:44:51,189 --[INFO]-- Started tracking the value of Name for 3 channels
-(logger.main) 2024-09-15 17:44:51,189 --[INFO]-- Starting the keylogger
+(logger.main) 2024-09-15 17:56:20,670 --[DEBUG]-- Initialized Logger
+(logger.main) 2024-09-15 17:56:20,670 --[DEBUG]-- Initializing
+(logger.main) 2024-09-15 17:56:20,674 --[INFO]-- Starting server on 0.0.0.0:8000
+(logger.main) 2024-09-15 17:56:20,677 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-15 17:56:28,346 --[INFO]-- Initialized Communication Class
+(logger.main) 2024-09-15 17:56:28,347 --[DEBUG]-- Created a (Input = True) cmd running meters/01
+(logger.main) 2024-09-15 17:56:28,347 --[DEBUG]-- Added listener to meters/01
+(logger.main) 2024-09-15 17:56:28,347 --[DEBUG]-- Created a (Input = True) cmd running /ch/1/config/name
+(logger.main) 2024-09-15 17:56:28,347 --[DEBUG]-- Added listener to /ch/1/config/name
+(logger.main) 2024-09-15 17:56:28,347 --[DEBUG]-- Created a (Input = True) cmd running /ch/2/config/name
+(logger.main) 2024-09-15 17:56:28,347 --[DEBUG]-- Added listener to /ch/2/config/name
+(logger.main) 2024-09-15 17:56:28,347 --[DEBUG]-- Created a (Input = True) cmd running /ch/3/config/name
+(logger.main) 2024-09-15 17:56:28,348 --[DEBUG]-- Added listener to /ch/3/config/name
+(logger.main) 2024-09-15 17:56:28,348 --[INFO]-- Started tracking the value of Name for 3 channels
