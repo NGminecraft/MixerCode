@@ -49,6 +49,8 @@ def main():
     print()
     
     
-
-if __name__ == "__main__":
-    main()
+try:
+    if __name__ == "__main__":
+        main()
+finally:
+    print("\033[?1049l")

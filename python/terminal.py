@@ -9,6 +9,7 @@ class Terminal:
         # --CONSTANTS--
         self.lineChange = "\033[F"
         self.clearToken = "\033[2K"
+        self.terminalPrefix = "\033[?1049h"
         # --CONSTANTS--
         
         self.logger = logging.getLogger("logger.main")

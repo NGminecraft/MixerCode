@@ -18,7 +18,7 @@ class KeyLogger:
             self.stopping = False
             self.logger = logging.getLogger("logger.main")
             self.logger.info("Starting the keylogger")
-            self.keys = {Key.esc: [self.stopKeylogging]}
+            self.keys = {Key.esc: [self.stop]}
         
             with Listener(on_press = self._on_press, on_release = self._on_release, suppress=True) as listener:
                 listener.join()
@@ -28,6 +28,8 @@ class KeyLogger:
             return False
         elif key in self.keys.keys():
             self.keys[key]()
+        else:
+            print(key)
     
     def _on_release(self, key):
         if self.stopping:
