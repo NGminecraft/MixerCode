@@ -24,12 +24,11 @@ class KeyLogger:
                 listener.join()
         
     def _on_press(self, key):
+        self.logger.debug(f"Recieved Keypress of {key}")
         if self.stopping:
             return False
         elif key in self.keys.keys():
             self.keys[key]()
-        else:
-            print(key)
     
     def _on_release(self, key):
         if self.stopping:

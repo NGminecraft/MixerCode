@@ -1,5 +1,6 @@
 from statusCache import Item
 import os
+import sys
 import logging
 from KeyLogger import KeyLogger
 
@@ -20,14 +21,15 @@ class Terminal:
         self.numChannels = infoClass.get_tracked_channels_count()
         self.numItems = infoClass.get_tracked_items_count()
         self.first = True
-        print("\n"* 3)
+        print(self.terminalPrefix)
         
     def check_channels(self):
         if self.infoClass.get_tracked_channels_count() != self.numChannels:
             self.numChannels = self.infoClass.get_tracked_channels_count()
         
     def update(self):
-        print(str(self.lineChange+self.clearToken)*(self.numItems+2)) # Clears Old data
+        sys.stdout.write("\033 7")
+        sys.stdout.write(str(self.lineChange+self.clearToken)*(self.numItems+2)) # Clears Old data
         self.numItems = self.infoClass.get_tracked_items_count()
         self.check_channels()
         
@@ -43,6 +45,7 @@ class Terminal:
                 toAdd = f"{j}: {self.infoClass.get_value_of_channel(i, j)}"
                 row_list.append(toAdd+(' '*(width_per_channel-len(toAdd))))
             full_list.append("#".join(row_list))
-        print("\n".join(full_list))
-        print()
-            
+        sys.stdout.write("\n".join(full_list))
+        sys.stdout.write("\n")
+        sys.stdout.write("\033 8")
+        sys.stdout.flush()

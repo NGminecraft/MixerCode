@@ -1,6 +1,6 @@
 import logging
 from utilClasses.cmd import CMD
-import threading
+import os
 from pythonosc import dispatcher
 from pythonosc import osc_server, udp_client, osc_message_builder
 import asyncio
@@ -13,8 +13,18 @@ class Comms:
         self.logger.info(f"Starting server on 0.0.0.0:8000")
         self.server.serve()
         self.logger.info(f"Started server, setting up client side")
-        ip = input("Enter the IP: ")
-        port = input("Enter the port: ")
+        try:
+            with open("config.config", "r") as file:
+                lines = [i.rstrip("\n").split(":")[-1] for i in file.readlines()]
+            self.logger.info(f"Found config.config and got the data {lines}")
+            ip = lines[0]
+            port = lines[1]
+        except FileNotFoundError:
+            ip = input("Enter the IP: ")
+            port = input("Enter the port: ")
+        except IndexError:
+            self.logger.critical("Invalid config.config file")
+            quit(-1)
         try:
             self.client = udp_client.SimpleUDPClient(ip, int(port))
         except TypeError:
