@@ -1,4 +1,5 @@
 import logging
+from time import sleep
 from communication import Comms
 from utilClasses.cmd import CMD
 from statusCache import Status
@@ -46,9 +47,12 @@ def main():
     terminal = Terminal(storageClass)
     while True:
         terminal.update()
+        sleep(0.1)
     print()
     
     
-
-if __name__ == "__main__":
-    main()
+try:
+    if __name__ == "__main__":
+        main()
+finally:
+    print("\033[?1049l")

@@ -28,9 +28,9 @@ class Status:
     def track_channel_value(self, cmd:str, id=None):
         """If command is sent as string, use 00 to signify each channel"""
         if not id:
-            id = cmd.value
+            id = cmd
         for i in self.channels:
-            self.values[i][id] = 0
+            self.values[i][id] = None
             self.tracker_register(Item(i, id, self.set_value).listener_func, CMD(cmd.replace("00", str(i)), True))
         self.valuesId.append(id)
         self.logger.info(f"Started tracking the value of {id} for {self.get_tracked_channels_count()} channels")
