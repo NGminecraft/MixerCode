@@ -1,5 +1,10 @@
-(logger.main) 2024-09-15 18:15:41,677 --[INFO]-- Starting server on 0.0.0.0:8000
-(logger.main) 2024-09-15 18:15:41,680 --[INFO]-- Started server, setting up client side
-(logger.main) 2024-09-15 18:15:41,682 --[INFO]-- Found config.config and got the data ['127.0.0.0', '12345']
-(logger.main) 2024-09-15 18:15:41,687 --[INFO]-- Initialized Communication Class
-(logger.main) 2024-09-15 18:15:41,689 --[INFO]-- Started tracking the value of Name for 3 channels
+(logger.main) 2024-09-15 20:39:07,138 --[INFO]-- Starting server on 0.0.0.0:8000
+(logger.main) 2024-09-15 20:39:07,140 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-15 20:39:07,141 --[INFO]-- Found config.config and got the data ['127.0.0.0', '12345']
+(logger.main) 2024-09-15 20:39:07,149 --[INFO]-- Initialized Communication Class
+(logger.main) 2024-09-15 20:39:07,152 --[INFO]-- Started tracking the value of Name for 3 channels
+(logger.main) 2024-09-15 20:39:07,153 --[INFO]-- Starting the keylogger
+(logger.main) 2024-09-15 20:39:15,508 --[INFO]-- Started tracking the value of /fader/00/ for 3 channels
+(logger.main) 2024-09-15 20:39:50,759 --[INFO]-- Started tracking the value of /fader/00/ for 3 channels
+(logger.main) 2024-09-15 20:39:57,442 --[INFO]-- Started tracking the value of fader for 3 channels
+(logger.main) 2024-09-15 20:40:12,350 --[INFO]-- Shutting down KeyLogger

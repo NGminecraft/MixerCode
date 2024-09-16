@@ -3,6 +3,7 @@ import os
 import sys
 import logging
 from KeyLogger import KeyLogger
+import asyncio
 
 
 class Terminal:
@@ -15,7 +16,7 @@ class Terminal:
         
         self.logger = logging.getLogger("logger.main")
         
-        self.keyLogger = KeyLogger()
+        self.keyLogger = KeyLogger(infoClass.track_channel_value)
         
         self.infoClass = infoClass
         self.numChannels = infoClass.get_tracked_channels_count()
@@ -28,7 +29,6 @@ class Terminal:
             self.numChannels = self.infoClass.get_tracked_channels_count()
         
     def update(self):
-        sys.stdout.write("\033 7")
         sys.stdout.write(str(self.lineChange+self.clearToken)*(self.numItems+2)) # Clears Old data
         self.numItems = self.infoClass.get_tracked_items_count()
         self.check_channels()
@@ -47,5 +47,6 @@ class Terminal:
             full_list.append("#".join(row_list))
         sys.stdout.write("\n".join(full_list))
         sys.stdout.write("\n")
-        sys.stdout.write("\033 8")
+        sys.stdout.write("\033[2K\r: ")
+        sys.stdout.write(self.keyLogger.typed_string)
         sys.stdout.flush()
