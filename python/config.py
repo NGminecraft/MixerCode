@@ -13,10 +13,14 @@ class Config:
             "gain":"/ch/00/dyn/mgain",
             "fader":"/ch/00/mix/fader"
         }
-    
+
+    def save_config(self, fp="settings.json"):
+        with open(fp, "w") as file:
+            json.dump(self, file)
 
 def get_config():
     if path.isfile("settings.json"):
-        return json.load("settings.json")
+        with open("settings.json", "r") as file:
+            return json.load(file)
     else:
         return Config()
