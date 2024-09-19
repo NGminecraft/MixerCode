@@ -1,99 +1,45 @@
-(logger.main) 2024-09-15 20:39:07,135 --[DEBUG]-- Initialized Logger
-(logger.main) 2024-09-15 20:39:07,136 --[DEBUG]-- Initializing
-(logger.main) 2024-09-15 20:39:07,138 --[INFO]-- Starting server on 0.0.0.0:8000
-(logger.main) 2024-09-15 20:39:07,140 --[INFO]-- Started server, setting up client side
-(logger.main) 2024-09-15 20:39:07,141 --[INFO]-- Found config.config and got the data ['127.0.0.0', '12345']
-(logger.main) 2024-09-15 20:39:07,149 --[INFO]-- Initialized Communication Class
-(logger.main) 2024-09-15 20:39:07,150 --[DEBUG]-- Created a (Input = True) cmd running meters/01
-(logger.main) 2024-09-15 20:39:07,151 --[DEBUG]-- Added listener to meters/01
-(logger.main) 2024-09-15 20:39:07,151 --[DEBUG]-- Created a (Input = True) cmd running /ch/1/config/name
-(logger.main) 2024-09-15 20:39:07,151 --[DEBUG]-- Added listener to /ch/1/config/name
-(logger.main) 2024-09-15 20:39:07,151 --[DEBUG]-- Created a (Input = True) cmd running /ch/2/config/name
-(logger.main) 2024-09-15 20:39:07,152 --[DEBUG]-- Added listener to /ch/2/config/name
-(logger.main) 2024-09-15 20:39:07,152 --[DEBUG]-- Created a (Input = True) cmd running /ch/3/config/name
-(logger.main) 2024-09-15 20:39:07,152 --[DEBUG]-- Added listener to /ch/3/config/name
-(logger.main) 2024-09-15 20:39:07,152 --[INFO]-- Started tracking the value of Name for 3 channels
-(logger.main) 2024-09-15 20:39:07,153 --[INFO]-- Starting the keylogger
-(logger.main) 2024-09-15 20:39:08,710 --[DEBUG]-- 
-(logger.main) 2024-09-15 20:39:08,710 --[DEBUG]-- Recieved keypress of 't'
-(logger.main) 2024-09-15 20:39:08,881 --[DEBUG]-- t
-(logger.main) 2024-09-15 20:39:08,881 --[DEBUG]-- Recieved keypress of 'r'
-(logger.main) 2024-09-15 20:39:08,960 --[DEBUG]-- tr
-(logger.main) 2024-09-15 20:39:08,961 --[DEBUG]-- Recieved keypress of 'a'
-(logger.main) 2024-09-15 20:39:09,230 --[DEBUG]-- tra
-(logger.main) 2024-09-15 20:39:09,230 --[DEBUG]-- Recieved keypress of 'c'
-(logger.main) 2024-09-15 20:39:09,431 --[DEBUG]-- trac
-(logger.main) 2024-09-15 20:39:09,431 --[DEBUG]-- Recieved keypress of 'k'
-(logger.main) 2024-09-15 20:39:09,562 --[DEBUG]-- track
-(logger.main) 2024-09-15 20:39:09,846 --[DEBUG]-- track 
-(logger.main) 2024-09-15 20:39:09,846 --[DEBUG]-- Recieved keypress of '/'
-(logger.main) 2024-09-15 20:39:10,035 --[DEBUG]-- track /
-(logger.main) 2024-09-15 20:39:10,035 --[DEBUG]-- Recieved keypress of 'f'
-(logger.main) 2024-09-15 20:39:10,261 --[DEBUG]-- track /f
-(logger.main) 2024-09-15 20:39:10,261 --[DEBUG]-- Recieved keypress of 'a'
-(logger.main) 2024-09-15 20:39:10,440 --[DEBUG]-- track /fa
-(logger.main) 2024-09-15 20:39:10,440 --[DEBUG]-- Recieved keypress of 'd'
-(logger.main) 2024-09-15 20:39:10,636 --[DEBUG]-- track /fad
-(logger.main) 2024-09-15 20:39:10,636 --[DEBUG]-- Recieved keypress of 'e'
-(logger.main) 2024-09-15 20:39:10,801 --[DEBUG]-- track /fade
-(logger.main) 2024-09-15 20:39:10,801 --[DEBUG]-- Recieved keypress of 'r'
-(logger.main) 2024-09-15 20:39:10,910 --[DEBUG]-- track /fader
-(logger.main) 2024-09-15 20:39:10,910 --[DEBUG]-- Recieved keypress of 's'
-(logger.main) 2024-09-15 20:39:12,150 --[DEBUG]-- track /faders
-(logger.main) 2024-09-15 20:39:12,151 --[DEBUG]-- Recieved keypress of '\\'
-(logger.main) 2024-09-15 20:39:12,556 --[DEBUG]-- track /faders\
-(logger.main) 2024-09-15 20:39:12,735 --[DEBUG]-- track /faders
-(logger.main) 2024-09-15 20:39:13,138 --[DEBUG]-- track /fader
-(logger.main) 2024-09-15 20:39:13,138 --[DEBUG]-- Recieved keypress of '/'
-(logger.main) 2024-09-15 20:39:13,850 --[DEBUG]-- track /fader/
-(logger.main) 2024-09-15 20:39:13,850 --[DEBUG]-- Recieved keypress of '-'
-(logger.main) 2024-09-15 20:39:14,326 --[DEBUG]-- track /fader/-
-(logger.main) 2024-09-15 20:39:14,741 --[DEBUG]-- track /fader/
-(logger.main) 2024-09-15 20:39:14,741 --[DEBUG]-- Recieved keypress of '0'
-(logger.main) 2024-09-15 20:39:14,881 --[DEBUG]-- track /fader/0
-(logger.main) 2024-09-15 20:39:14,881 --[DEBUG]-- Recieved keypress of '0'
-(logger.main) 2024-09-15 20:39:14,987 --[DEBUG]-- track /fader/00
-(logger.main) 2024-09-15 20:39:14,987 --[DEBUG]-- Recieved keypress of '/'
-(logger.main) 2024-09-15 20:39:15,507 --[DEBUG]-- track /fader/00/
-(logger.main) 2024-09-15 20:39:15,507 --[DEBUG]-- Recieved keypress of Key.enter
-(logger.main) 2024-09-15 20:39:15,507 --[DEBUG]-- started tracking ['/fader/00/']
-(logger.main) 2024-09-15 20:39:15,508 --[DEBUG]-- Created a (Input = True) cmd running /fader/1/
-(logger.main) 2024-09-15 20:39:15,508 --[DEBUG]-- Added listener to /fader/1/
-(logger.main) 2024-09-15 20:39:15,508 --[DEBUG]-- Created a (Input = True) cmd running /fader/2/
-(logger.main) 2024-09-15 20:39:15,508 --[DEBUG]-- Added listener to /fader/2/
-(logger.main) 2024-09-15 20:39:15,508 --[DEBUG]-- Created a (Input = True) cmd running /fader/3/
-(logger.main) 2024-09-15 20:39:15,508 --[DEBUG]-- Added listener to /fader/3/
-(logger.main) 2024-09-15 20:39:15,508 --[INFO]-- Started tracking the value of /fader/00/ for 3 channels
-(logger.main) 2024-09-15 20:39:50,758 --[DEBUG]-- track /fader/00/
-(logger.main) 2024-09-15 20:39:50,758 --[DEBUG]-- Recieved keypress of Key.enter
-(logger.main) 2024-09-15 20:39:50,758 --[DEBUG]-- started tracking ['/fader/00/']
-(logger.main) 2024-09-15 20:39:50,758 --[DEBUG]-- Created a (Input = True) cmd running /fader/1/
-(logger.main) 2024-09-15 20:39:50,758 --[DEBUG]-- Added listener to /fader/1/
-(logger.main) 2024-09-15 20:39:50,758 --[DEBUG]-- Created a (Input = True) cmd running /fader/2/
-(logger.main) 2024-09-15 20:39:50,759 --[DEBUG]-- Added listener to /fader/2/
-(logger.main) 2024-09-15 20:39:50,759 --[DEBUG]-- Created a (Input = True) cmd running /fader/3/
-(logger.main) 2024-09-15 20:39:50,759 --[DEBUG]-- Added listener to /fader/3/
-(logger.main) 2024-09-15 20:39:50,759 --[INFO]-- Started tracking the value of /fader/00/ for 3 channels
-(logger.main) 2024-09-15 20:39:54,687 --[DEBUG]-- track /fader/00/
-(logger.main) 2024-09-15 20:39:55,923 --[DEBUG]-- track /fader/00/ 
-(logger.main) 2024-09-15 20:39:55,923 --[DEBUG]-- Recieved keypress of 'f'
-(logger.main) 2024-09-15 20:39:56,052 --[DEBUG]-- track /fader/00/ f
-(logger.main) 2024-09-15 20:39:56,052 --[DEBUG]-- Recieved keypress of 'a'
-(logger.main) 2024-09-15 20:39:56,237 --[DEBUG]-- track /fader/00/ fa
-(logger.main) 2024-09-15 20:39:56,237 --[DEBUG]-- Recieved keypress of 'd'
-(logger.main) 2024-09-15 20:39:56,553 --[DEBUG]-- track /fader/00/ fad
-(logger.main) 2024-09-15 20:39:56,553 --[DEBUG]-- Recieved keypress of 'e'
-(logger.main) 2024-09-15 20:39:56,682 --[DEBUG]-- track /fader/00/ fade
-(logger.main) 2024-09-15 20:39:56,682 --[DEBUG]-- Recieved keypress of 'r'
-(logger.main) 2024-09-15 20:39:57,440 --[DEBUG]-- track /fader/00/ fader
-(logger.main) 2024-09-15 20:39:57,441 --[DEBUG]-- Recieved keypress of Key.enter
-(logger.main) 2024-09-15 20:39:57,441 --[DEBUG]-- started tracking ['/fader/00/', 'fader']
-(logger.main) 2024-09-15 20:39:57,441 --[DEBUG]-- Created a (Input = True) cmd running /fader/1/
-(logger.main) 2024-09-15 20:39:57,441 --[DEBUG]-- Added listener to /fader/1/
-(logger.main) 2024-09-15 20:39:57,441 --[DEBUG]-- Created a (Input = True) cmd running /fader/2/
-(logger.main) 2024-09-15 20:39:57,441 --[DEBUG]-- Added listener to /fader/2/
-(logger.main) 2024-09-15 20:39:57,442 --[DEBUG]-- Created a (Input = True) cmd running /fader/3/
-(logger.main) 2024-09-15 20:39:57,442 --[DEBUG]-- Added listener to /fader/3/
-(logger.main) 2024-09-15 20:39:57,442 --[INFO]-- Started tracking the value of fader for 3 channels
-(logger.main) 2024-09-15 20:40:12,350 --[DEBUG]-- track /fader/00/ fader
-(logger.main) 2024-09-15 20:40:12,350 --[INFO]-- Shutting down KeyLogger
+(logger.main) 2024-09-18 18:19:37,069 --[DEBUG]-- Initialized Logger
+(logger.main) 2024-09-18 18:19:37,070 --[DEBUG]-- Initializing
+(logger.main) 2024-09-18 18:19:37,083 --[INFO]-- Starting server on 172.16.0.2:63080
+(logger.main) 2024-09-18 18:19:37,086 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-18 18:19:37,099 --[INFO]-- Found config.config and got the data ['127.0.0.0', '12345']
+(logger.main) 2024-09-18 18:19:37,100 --[DEBUG]-- Created a (Input = True) cmd running /xinfo
+(logger.main) 2024-09-18 18:19:37,100 --[DEBUG]-- Added listener to /xinfo
+(logger.main) 2024-09-18 18:19:37,100 --[DEBUG]-- Sending message of /xinfo with value None
+(logger.main) 2024-09-18 18:19:37,102 --[INFO]-- Initialized Communication Class
+(logger.main) 2024-09-18 18:19:37,104 --[DEBUG]-- Created a (Input = True) cmd running /ch/1/config/name
+(logger.main) 2024-09-18 18:19:37,105 --[DEBUG]-- Added listener to /ch/1/config/name
+(logger.main) 2024-09-18 18:19:37,105 --[DEBUG]-- Created a (Input = True) cmd running /ch/2/config/name
+(logger.main) 2024-09-18 18:19:37,105 --[DEBUG]-- Added listener to /ch/2/config/name
+(logger.main) 2024-09-18 18:19:37,105 --[DEBUG]-- Created a (Input = True) cmd running /ch/3/config/name
+(logger.main) 2024-09-18 18:19:37,105 --[DEBUG]-- Added listener to /ch/3/config/name
+(logger.main) 2024-09-18 18:19:37,106 --[DEBUG]-- Created a (Input = True) cmd running /ch/4/config/name
+(logger.main) 2024-09-18 18:19:37,106 --[DEBUG]-- Added listener to /ch/4/config/name
+(logger.main) 2024-09-18 18:19:37,106 --[DEBUG]-- Created a (Input = True) cmd running /ch/5/config/name
+(logger.main) 2024-09-18 18:19:37,106 --[DEBUG]-- Added listener to /ch/5/config/name
+(logger.main) 2024-09-18 18:19:37,116 --[DEBUG]-- Created a (Input = True) cmd running /ch/6/config/name
+(logger.main) 2024-09-18 18:19:37,121 --[DEBUG]-- Added listener to /ch/6/config/name
+(logger.main) 2024-09-18 18:19:37,122 --[DEBUG]-- Created a (Input = True) cmd running /ch/7/config/name
+(logger.main) 2024-09-18 18:19:37,122 --[DEBUG]-- Added listener to /ch/7/config/name
+(logger.main) 2024-09-18 18:19:37,123 --[DEBUG]-- Created a (Input = True) cmd running /ch/8/config/name
+(logger.main) 2024-09-18 18:19:37,123 --[DEBUG]-- Added listener to /ch/8/config/name
+(logger.main) 2024-09-18 18:19:37,123 --[DEBUG]-- Created a (Input = True) cmd running /ch/9/config/name
+(logger.main) 2024-09-18 18:19:37,123 --[DEBUG]-- Added listener to /ch/9/config/name
+(logger.main) 2024-09-18 18:19:37,123 --[DEBUG]-- Created a (Input = True) cmd running /ch/10/config/name
+(logger.main) 2024-09-18 18:19:37,123 --[DEBUG]-- Added listener to /ch/10/config/name
+(logger.main) 2024-09-18 18:19:37,123 --[DEBUG]-- Created a (Input = True) cmd running /ch/11/config/name
+(logger.main) 2024-09-18 18:19:37,124 --[DEBUG]-- Added listener to /ch/11/config/name
+(logger.main) 2024-09-18 18:19:37,124 --[DEBUG]-- Created a (Input = True) cmd running /ch/12/config/name
+(logger.main) 2024-09-18 18:19:37,124 --[DEBUG]-- Added listener to /ch/12/config/name
+(logger.main) 2024-09-18 18:19:37,124 --[DEBUG]-- Created a (Input = True) cmd running /ch/13/config/name
+(logger.main) 2024-09-18 18:19:37,124 --[DEBUG]-- Added listener to /ch/13/config/name
+(logger.main) 2024-09-18 18:19:37,124 --[DEBUG]-- Created a (Input = True) cmd running /ch/14/config/name
+(logger.main) 2024-09-18 18:19:37,124 --[DEBUG]-- Added listener to /ch/14/config/name
+(logger.main) 2024-09-18 18:19:37,124 --[DEBUG]-- Created a (Input = True) cmd running /ch/15/config/name
+(logger.main) 2024-09-18 18:19:37,125 --[DEBUG]-- Added listener to /ch/15/config/name
+(logger.main) 2024-09-18 18:19:37,125 --[DEBUG]-- Created a (Input = True) cmd running /ch/16/config/name
+(logger.main) 2024-09-18 18:19:37,125 --[DEBUG]-- Added listener to /ch/16/config/name
+(logger.main) 2024-09-18 18:19:37,125 --[INFO]-- Started tracking the value of Name for 16 channels
+(logger.main) 2024-09-18 18:19:37,125 --[INFO]-- Starting the keylogger
+(logger.main) 2024-09-18 18:19:39,176 --[DEBUG]-- 
+(logger.main) 2024-09-18 18:19:39,177 --[INFO]-- Shutting down KeyLogger

@@ -8,7 +8,7 @@ import logging
 from utilClasses.cmd import CMD
 
 class KeyLogger:
-    def __init__(self, register_cmd_function):
+    def __init__(self, register_cmd_function, send_cmd_function):
         if not keyboard:
             self.logger = logging.getLogger("logger.main")
             self.logger.error("Envrionment errors, unable to start keylogger")
@@ -29,6 +29,7 @@ class KeyLogger:
             self.typed_string = ""
             
             self.handler_register = register_cmd_function
+            self.send_message = send_cmd_function
             
 
 
@@ -75,4 +76,6 @@ class KeyLogger:
         if string[0] == "track":
             self.logger.debug(f"started tracking {string[1:]}")
             self.handler_register(*string[1:])
-            
+        elif string[0] == "send":
+            self.logger.debug(f"sending command: {string[1:]}")
+            self.send_message(*string[1:])

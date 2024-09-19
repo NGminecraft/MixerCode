@@ -4,7 +4,7 @@ from utilClasses.cmd import CMD
 
 
 class Status:
-    def __init__(self, handler_register, num_channels:int|None=None, channels: list[int]|tuple|None = None):
+    def __init__(self, communication_class, num_channels:int|None=None, channels: list[int]|tuple|None = None):
         self.logger = logging.getLogger("logger.main")
         if not num_channels:
             self.channels = set(range(1, 17))
@@ -15,7 +15,9 @@ class Status:
             
         self.tracked_items_count = 0
         
-        self.tracker_register = handler_register
+        self.tracker_register = communication_class.registerListener
+        
+        self.send_command = communication_class.sendMessage
             
         # The way this is set up: {Channel Number:{id: value}}
         self.values = {}
@@ -34,6 +36,10 @@ class Status:
             self.tracker_register(Item(i, id, self.set_value).listener_func, CMD(cmd.replace("00", str(i)), True))
         self.valuesId.append(id)
         self.logger.info(f"Started tracking the value of {id} for {self.get_tracked_channels_count()} channels")
+        
+    def send_message(self, cmd, value=None):
+        self.logger.debug(f"sending command {cmd} with value {value}")
+        self.send_command(cmd, value)
             
     def get_tracked_items(self):
         return self.valuesId

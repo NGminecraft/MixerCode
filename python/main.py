@@ -41,9 +41,10 @@ def main():
     logger.debug("Initialized Logger")
     logger.debug("Initializing")
     communicationClass = Comms()
+    communicationClass.registerListener(lambda x, *args: logger.info(x, args), CMD("/xinfo"))
+    communicationClass.sendMessage("/xinfo")
     logger.info("Initialized Communication Class")
-    communicationClass.registerListener(reportInput, CMD("meters/01"))
-    storageClass = Status(communicationClass.registerListener, 3)
+    storageClass = Status(communicationClass)
     terminal = Terminal(storageClass)
     while True:
         terminal.update()

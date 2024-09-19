@@ -16,7 +16,7 @@ class Terminal:
         
         self.logger = logging.getLogger("logger.main")
         
-        self.keyLogger = KeyLogger(infoClass.track_channel_value)
+        self.keyLogger = KeyLogger(infoClass.track_channel_value, infoClass.send_message)
         
         self.infoClass = infoClass
         self.numChannels = infoClass.get_tracked_channels_count()
