@@ -4,6 +4,7 @@ from communication import Comms
 from utilClasses.cmd import CMD
 from statusCache import Status
 from terminal import Terminal
+from config import Config, get_config
 
 def resetLogger():
     for i in ["debugLog.log", "log.log"]:
@@ -40,6 +41,7 @@ def main():
     logger = setupLogger()
     logger.debug("Initialized Logger")
     logger.debug("Initializing")
+    configClass = get_config()
     communicationClass = Comms()
     communicationClass.registerListener(lambda x, *args: logger.info(x, args), CMD("/xinfo"))
     communicationClass.sendMessage("/xinfo")
