@@ -1,7 +1,7 @@
-(logger.main) 2024-09-18 18:19:37,083 --[INFO]-- Starting server on 172.16.0.2:63080
-(logger.main) 2024-09-18 18:19:37,086 --[INFO]-- Started server, setting up client side
-(logger.main) 2024-09-18 18:19:37,099 --[INFO]-- Found config.config and got the data ['127.0.0.0', '12345']
-(logger.main) 2024-09-18 18:19:37,102 --[INFO]-- Initialized Communication Class
-(logger.main) 2024-09-18 18:19:37,125 --[INFO]-- Started tracking the value of Name for 16 channels
-(logger.main) 2024-09-18 18:19:37,125 --[INFO]-- Starting the keylogger
-(logger.main) 2024-09-18 18:19:39,177 --[INFO]-- Shutting down KeyLogger
+(logger.main) 2024-09-18 07:31:08,061 --[INFO]-- Starting server on 192.168.1.101:63080
+(logger.main) 2024-09-18 07:31:08,063 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-18 07:31:08,064 --[INFO]-- Found config.config and got the data ['192.168.1.1', '10024']
+(logger.main) 2024-09-18 07:31:08,065 --[INFO]-- Initialized Communication Class
+(logger.main) 2024-09-18 07:31:08,068 --[INFO]-- Started tracking the value of Name for 16 channels
+(logger.main) 2024-09-18 07:31:08,068 --[INFO]-- Starting the keylogger
+(logger.main) 2024-09-18 07:31:10,364 --[INFO]-- Shutting down KeyLogger
