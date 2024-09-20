@@ -3,7 +3,7 @@ from utilClasses.cmd import CMD
 import socket
 from pythonosc import dispatcher
 from pythonosc import osc_server, udp_client
-from pythonosc.osc_message_builder import OscMessageBuilder
+from pythonosc.osc_message_builder import build_msg
 import asyncio
 from config import Config
 
@@ -39,5 +39,5 @@ class Comms:
         if value:
             builder.add_arg(value)
 #        self.client.send_message(cmd, value)
-        self.sock.sendto(builder.build().dgram(), (self.config.remote_ip, self.config.remote_port))
+        self.sock.sendto(build_msg(cmd, value).dgram(), (self.config.remote_ip, self.config.remote_port))
         
