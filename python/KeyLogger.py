@@ -56,6 +56,8 @@ class KeyLogger:
                 self.typed_string += key.char
             except AttributeError:
                 if key == Key.enter:
+                    print("\033[?1049l")
+                    self.logger.debug(f"Process command {self.typed_string}")
                     self.cmdClass.process_command(self.typed_string)
                     self.typed_string = ""
             
