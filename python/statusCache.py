@@ -37,7 +37,7 @@ class Status:
         self.valuesId.append(id)
         self.logger.info(f"Started tracking the value of {id} for {self.get_tracked_channels_count()} channels")
         
-    def send_message(self, cmd, value=None):
+    def sendMessage(self, cmd, value=None):
         self.logger.debug(f"sending command {cmd} with value {value}")
         self.send_command(cmd, value)
             

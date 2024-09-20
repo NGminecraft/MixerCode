@@ -3,11 +3,12 @@ import os
 import sys
 import logging
 from KeyLogger import KeyLogger
-import asyncio
+from config import Config
+from CommandHandler import CommandHandler
 
 
 class Terminal:
-    def __init__(self, infoClass:Item):
+    def __init__(self, infoClass:Item, config:Config):
         # --CONSTANTS--
         self.lineChange = "\033[F"
         self.clearToken = "\033[2K"
@@ -16,7 +17,11 @@ class Terminal:
         
         self.logger = logging.getLogger("logger.main")
         
+        self.commandHandler = CommandHandler(config, infoClass)
+        
         self.keyLogger = KeyLogger(infoClass.track_channel_value, infoClass.send_message)
+        
+        self.configClass = config
         
         self.infoClass = infoClass
         self.numChannels = infoClass.get_tracked_channels_count()

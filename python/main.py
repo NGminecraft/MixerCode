@@ -4,7 +4,7 @@ from communication import Comms
 from utilClasses.cmd import CMD
 from statusCache import Status
 from terminal import Terminal
-from config import Config, get_config
+from config import get_config
 
 def resetLogger():
     for i in ["debugLog.log", "log.log"]:
@@ -40,14 +40,15 @@ def main():
     resetLogger()
     logger = setupLogger()
     logger.debug("Initialized Logger")
-    logger.debug("Initializing")
+    logger.debug("Initializing config")
     configClass = get_config()
-    communicationClass = Comms()
+    logger.debug("Config Initialized, Initializing Communications")
+    communicationClass = Comms(configClass)
     communicationClass.registerListener(lambda x, *args: logger.info(x, args), CMD("/xinfo"))
     communicationClass.sendMessage("/xinfo")
-    logger.info("Initialized Communication Class")
+    logger.info("Initialized Communication Class, Starting on storage class")
     storageClass = Status(communicationClass)
-    terminal = Terminal(storageClass)
+    terminal = Terminal(storageClass, configClass)
     while True:
         terminal.update()
         sleep(0.1)

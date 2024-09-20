@@ -1,25 +1,29 @@
+from CommandHandler import CommandHandler
 keyboard = True
 try:
     from pynput.keyboard import Key, Listener, Controller
 except ImportError:
     keyboard = False
-from multiprocessing import process
-import logging
-from utilClasses.cmd import CMD
+import logging  # noqa: E402
 
 class KeyLogger:
-    def __init__(self, register_cmd_function, send_cmd_function):
+    def __init__(self, register_cmd_function, send_cmd_function, cmdClass:CommandHandler):
         if not keyboard:
             self.logger = logging.getLogger("logger.main")
-            self.logger.error("Envrionment errors, unable to start keylogger")
+            self.logger.error("Environment errors, unable to start keylogger")
             self.logger.error("Check that your running on a standard windows machine")
             return None
         else:
             self.logger = logging.getLogger("logger.main")
             self.logger.info("Starting the keylogger")
+            
+            self.cmdClass = cmdClass
+            
             #--CONSTANTS--
-            _space_func = lambda : setattr(self, 'typed_string', self.typed_string + " ")
-            _backspace_func = lambda : setattr(self, 'typed_string', self.typed_string[0:-1])
+            def _space_func():
+                return setattr(self, "typed_string", self.typed_string + " ")
+            def _backspace_func():
+                return setattr(self, "typed_string", self.typed_string[0:-1])
             #--CONSTANTS--
             self.keys = {Key.esc: self.stop,
                          Key.space: _space_func,
@@ -41,7 +45,6 @@ class KeyLogger:
         return listener
         
     def _on_press(self, key):
-        self.logger.debug(f"{self.typed_string}")
         if key in self.keys.keys():
             self.keys[key]()
         else:
@@ -50,11 +53,10 @@ class KeyLogger:
                     # Insert non-typing code here
                     return
             try:
-                self.logger.debug(f"Recieved keypress of {key}")
                 self.typed_string += key.char
             except AttributeError:
                 if key == Key.enter:
-                    self.decode_command(self.typed_string)
+                    self.cmdClass.process_command(self.typed_string)
                     self.typed_string = ""
             
     
