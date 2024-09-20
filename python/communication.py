@@ -39,5 +39,5 @@ class Comms:
         if value:
             builder.add_arg(value)
 #        self.client.send_message(cmd, value)
-        self.sock.sendto(builder.build()._dgram, (self.config.remote_ip, self.config.remote_port))
+        self.sock.sendto(builder.build().dgram(), (self.config.remote_ip, self.config.remote_port))
         
