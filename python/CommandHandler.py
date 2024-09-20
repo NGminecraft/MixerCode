@@ -18,8 +18,15 @@ class CommandHandler:
                     logging.error(f"Got invalid channel value: {command[2]}")
                     return None
             else:
-                channels = self.storageClass.get_tracked_channels_count()
+                channels = self.storageClass.get_tracked_channels()
             for i in channels:
                 padded_channel = f"{i:02}"
                 self.storageClass.sendMessage(self.commandKeys[command[0]].replace("00", padded_channel), command[1])
                 self.logger.debug(f'Ran command {self.commandKeys[command[0]].replace("00", padded_channel)} {command[1]}')
+        else:
+            if command[0] == "track":
+                self.logger.debug(f"started tracking {command[1:]}")
+                self.storageClass.track_channel_value(*command[1:])
+            elif command[0] == "send":
+                self.logger.debug(f"sending command: {command[1:]}")
+                self.storageClass.send_command(*command[1:])
