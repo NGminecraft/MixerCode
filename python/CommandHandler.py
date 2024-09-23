@@ -15,4 +15,4 @@ class CommandHandler:
             if command[2] != "a":
                 self.logger.debug(f"Running on channel {command[2]}")
                 if command[1].isnumeric() and command[2].isnumeric():
-                    self.communicationClass.sendMessage(self.valid_commands[command[0]], int(command[2]))
+                    self.communicationClass.send_message(self.valid_commands[command[0]], int(command[2]))
