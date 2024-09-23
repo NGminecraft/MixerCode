@@ -16,11 +16,10 @@ class Comms:
         self.logger.info(f"Starting server on {config.local_ip}:{config.local_port}")
         self.server.serve()
         self.logger.info("Started server, setting up client side")
-        # Creates a socket for a specific port
-        self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.sock.bind(('', config.local_port))
         # This is setting up the sending of data (mixers data)
-        self.client = udp_client.SimpleUDPClient(config.remote_ip, config.remote_port, sock=self.sock)
+        self.client = udp_client.SimpleUDPClient(config.remote_ip, config.remote_port)
+        # Even though you technically sholdn't do this, I'm desperate
+        self.client._sock.bind((config.local_ip, config.local_port))
     
     def registerListener(self, func_object, cmd:CMD):
         if cmd:
