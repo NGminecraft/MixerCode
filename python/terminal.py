@@ -44,12 +44,15 @@ class Terminal:
         ids = self.infoClass.get_tracked_items()
         
         full_list = []
+        # This loops through all the tracked keys, gets the value and then formats it with a # between the items
+        # TBH i'm scared of touching this or the dictionary it reads from
         for j in ids:
             row_list = []
             for i in range(1, self.numChannels+1):
                 toAdd = f"{j}: {self.infoClass.get_value_of_channel(i, j)}"
                 row_list.append(toAdd+(' '*(width_per_channel-len(toAdd))))
             full_list.append("#".join(row_list))
+        # This adds the text to the string as well as whatever is being typed
         sys.stdout.write("\n".join(full_list))
         sys.stdout.write("\n")
         sys.stdout.write("\033[2K\r: ")
