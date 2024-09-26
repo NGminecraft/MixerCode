@@ -1,5 +1,6 @@
-(logger.main) 2024-09-19 18:44:15,816 --[DEBUG]-- Initialized Logger
-(logger.main) 2024-09-19 18:44:15,816 --[DEBUG]-- Initializing config
-(logger.main) 2024-09-19 18:44:15,817 --[DEBUG]-- Config Initialized, Initializing Communications
-(logger.main) 2024-09-19 18:44:15,817 --[INFO]-- Starting server on 127.0.1.1:5005
-(logger.main) 2024-09-19 18:44:15,817 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-25 22:13:45,631 --[DEBUG]-- Initialized Logger
+(logger.main) 2024-09-25 22:13:45,632 --[DEBUG]-- Initializing config
+(logger.main) 2024-09-25 22:13:45,642 --[DEBUG]-- Config Initialized, Initializing Communications
+(logger.main) 2024-09-25 22:13:45,644 --[INFO]-- Starting server on 192.168.0.122:5005, (('192.168.0.122', 5005))
+(logger.main) 2024-09-25 22:13:45,646 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-25 22:13:45,648 --[INFO]-- Set up client server on ('192.168.0.122', 5005)
