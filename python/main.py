@@ -44,7 +44,11 @@ def main():
     configClass = get_config()
     logger.debug("Config Initialized, Initializing Communications")
     communicationClass = Comms(configClass)
+<<<<<<< HEAD
+    communicationClass.registerListener(reportInput, CMD("/xinfo"))
+=======
     communicationClass.registerListener(lambda x, *args: logger.info(x, args), CMD("/xinfo"))
+>>>>>>> c4d2f088005f40a683c0538e6f513bd420849fa7
     communicationClass.sendMessage("/xinfo")
     logger.info("Initialized Communication Class, Starting on storage class")
     storageClass = Status(communicationClass)
