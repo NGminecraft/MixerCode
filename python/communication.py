@@ -13,13 +13,13 @@ class Comms:
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.socket.bind((config.local_ip, config.local_port))
-#        self.socket.setblocking(False)
+        self.socket.setblocking(False)
         # Setting the socket as the asyncio datagram socket
         # This is for the part of the server responsible for receiving data (local devices data)
         self.mainDispatcher = dispatcher.Dispatcher()
         self.mainDispatcher.set_default_handler(self.logger.debug)
         self.server = osc_server.AsyncIOOSCUDPServer(
-            (config.local_ip, 5843), self.mainDispatcher, asyncio.get_event_loop()
+            (config.local_ip, 5005), self.mainDispatcher, asyncio.get_event_loop()
         )
 
         async def create_server():
