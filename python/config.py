@@ -5,7 +5,8 @@ import socket
 
 class Config:
     def __init__(self):
-        self.local_ip = socket.gethostbyname(socket.gethostname())
+#        self.local_ip = socket.gethostbyname(socket.gethostname())
+        self.local_ip = "0.0.0.0"
         self.local_port = 5005
         self.remote_ip = "192.168.1.1"
         self.remote_port = 10024

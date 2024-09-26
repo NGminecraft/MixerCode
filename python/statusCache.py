@@ -33,7 +33,7 @@ class Status:
             id = cmd
         for i in self.channels:
             self.values[i][id] = None
-            self.tracker_register(Item(i, id, self.set_value).listener_func, CMD(cmd.replace("00", str(i)), True))
+            self.tracker_register(Item(i, id, self.set_value).listener_func, CMD(cmd.replace("00", str(i).zfill(2)), True))
         self.valuesId.append(id)
         self.logger.info(f"Started tracking the value of {id} for {self.get_tracked_channels_count()} channels")
         

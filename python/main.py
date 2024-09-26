@@ -44,12 +44,19 @@ def main():
     configClass = get_config()
     logger.debug("Config Initialized, Initializing Communications")
     communicationClass = Comms(configClass)
+    communicationClass.registerListener(reportInput, CMD("/*"))
     communicationClass.registerListener(reportInput, CMD("/xinfo"))
     communicationClass.sendMessage("/xinfo")
     logger.info("Initialized Communication Class, Starting on storage class")
     storageClass = Status(communicationClass)
     terminal = Terminal(storageClass, configClass)
     while True:
+        try:
+            data, addr = communicationClass.get_socket().recvfrom(1024)
+            if data:
+                logger.debug(f"got {data} from {addr}")
+        except BlockingIOError:
+            pass
         terminal.update()
         sleep(0.1)
     print()
