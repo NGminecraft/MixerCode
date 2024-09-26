@@ -6,11 +6,7 @@ class CommandHandler:
         self.logger = logging.getLogger("logger.main")
         self.storageClass = storageClass
         self.valid_commands = config.commands
-<<<<<<< HEAD
-        self.commandKeys = set(config.commands.keys())
-=======
         self.commandKeys = set(self.config.commands.keys())
->>>>>>> c4d2f088005f40a683c0538e6f513bd420849fa7
 
     def process_command(self, command):
         command = command.split(" ")

