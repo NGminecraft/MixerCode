@@ -2,6 +2,7 @@ import json
 from os import path
 import socket
 
+config = _get_config()
 
 class Config:
     def __init__(self):
@@ -18,9 +19,13 @@ class Config:
         with open(fp, "w") as file:
             json.dump(self, file)
 
-def get_config():
+def _get_config():
     if path.isfile("settings.json"):
         with open("settings.json", "r") as file:
             return json.load(file)
     else:
         return Config()
+
+def get_config():
+    global config
+    return config
