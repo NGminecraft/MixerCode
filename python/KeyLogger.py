@@ -6,6 +6,8 @@ except ImportError:
     keyboard = False
 import logging  # noqa: E402
 from warnings import depreciated
+from config import get_config
+
 
 class KeyLogger:
     def __init__(self, register_cmd_function, send_cmd_function, cmdClass:CommandHandler):
@@ -75,6 +77,8 @@ class KeyLogger:
         self.logger.info("Shutting down KeyLogger")
         self.listener.stop()
         # Right here add the methods to stop the rest of the code
+        self.logger.info("Saving config")
+        get_config().save_config()
 
     @depreciated
     def decode_command(self, string):
