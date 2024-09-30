@@ -51,14 +51,17 @@ def main():
     storageClass = Status(communicationClass)
     terminal = Terminal(storageClass, configClass)
     while True:
+        """
         try:
             data, addr = communicationClass.get_socket().recvfrom(1024)
             if data:
                 logger.debug(f"got {data} from {addr}")
         except BlockingIOError:
             pass
+            """ 
         terminal.update()
         sleep(0.1)
+        
     print()
     
     

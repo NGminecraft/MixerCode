@@ -1,53 +1,47 @@
-(logger.main) 2024-09-26 11:18:20,147 --[DEBUG]-- Initialized Logger
-(logger.main) 2024-09-26 11:18:20,147 --[DEBUG]-- Initializing config
-(logger.main) 2024-09-26 11:18:20,149 --[DEBUG]-- Config Initialized, Initializing Communications
-(logger.main) 2024-09-26 11:18:20,150 --[INFO]-- Starting server on 0.0.0.0:5005, (('0.0.0.0', 5005))
-(logger.main) 2024-09-26 11:18:20,151 --[INFO]-- Started server, setting up client side
-(logger.main) 2024-09-26 11:18:20,157 --[INFO]-- Set up client server on ('0.0.0.0', 5005)
-(logger.main) 2024-09-26 11:18:20,167 --[DEBUG]-- Created a (Input = True) cmd running /*
-(logger.main) 2024-09-26 11:18:20,171 --[DEBUG]-- Added listener to /*
-(logger.main) 2024-09-26 11:18:20,216 --[DEBUG]-- Created a (Input = True) cmd running /xinfo
-(logger.main) 2024-09-26 11:18:20,216 --[DEBUG]-- Added listener to /xinfo
-(logger.main) 2024-09-26 11:18:20,216 --[DEBUG]-- Sending message of /xinfo with value None
-(logger.main) 2024-09-26 11:18:20,217 --[INFO]-- Initialized Communication Class, Starting on storage class
-(logger.main) 2024-09-26 11:18:20,257 --[DEBUG]-- Created a (Input = True) cmd running /ch/01/config/name
-(logger.main) 2024-09-26 11:18:20,257 --[DEBUG]-- Added listener to /ch/01/config/name
-(logger.main) 2024-09-26 11:18:20,257 --[DEBUG]-- Created a (Input = True) cmd running /ch/02/config/name
-(logger.main) 2024-09-26 11:18:20,258 --[DEBUG]-- Added listener to /ch/02/config/name
-(logger.main) 2024-09-26 11:18:20,258 --[DEBUG]-- Created a (Input = True) cmd running /ch/03/config/name
-(logger.main) 2024-09-26 11:18:20,258 --[DEBUG]-- Added listener to /ch/03/config/name
-(logger.main) 2024-09-26 11:18:20,259 --[DEBUG]-- Created a (Input = True) cmd running /ch/04/config/name
-(logger.main) 2024-09-26 11:18:20,259 --[DEBUG]-- Added listener to /ch/04/config/name
-(logger.main) 2024-09-26 11:18:20,259 --[DEBUG]-- Created a (Input = True) cmd running /ch/05/config/name
-(logger.main) 2024-09-26 11:18:20,259 --[DEBUG]-- Added listener to /ch/05/config/name
-(logger.main) 2024-09-26 11:18:20,259 --[DEBUG]-- Created a (Input = True) cmd running /ch/06/config/name
-(logger.main) 2024-09-26 11:18:20,260 --[DEBUG]-- Added listener to /ch/06/config/name
-(logger.main) 2024-09-26 11:18:20,260 --[DEBUG]-- Created a (Input = True) cmd running /ch/07/config/name
-(logger.main) 2024-09-26 11:18:20,260 --[DEBUG]-- Added listener to /ch/07/config/name
-(logger.main) 2024-09-26 11:18:20,260 --[DEBUG]-- Created a (Input = True) cmd running /ch/08/config/name
-(logger.main) 2024-09-26 11:18:20,260 --[DEBUG]-- Added listener to /ch/08/config/name
-(logger.main) 2024-09-26 11:18:20,261 --[DEBUG]-- Created a (Input = True) cmd running /ch/09/config/name
-(logger.main) 2024-09-26 11:18:20,261 --[DEBUG]-- Added listener to /ch/09/config/name
-(logger.main) 2024-09-26 11:18:20,262 --[DEBUG]-- Created a (Input = True) cmd running /ch/10/config/name
-(logger.main) 2024-09-26 11:18:20,262 --[DEBUG]-- Added listener to /ch/10/config/name
-(logger.main) 2024-09-26 11:18:20,262 --[DEBUG]-- Created a (Input = True) cmd running /ch/11/config/name
-(logger.main) 2024-09-26 11:18:20,262 --[DEBUG]-- Added listener to /ch/11/config/name
-(logger.main) 2024-09-26 11:18:20,262 --[DEBUG]-- Created a (Input = True) cmd running /ch/12/config/name
-(logger.main) 2024-09-26 11:18:20,262 --[DEBUG]-- Added listener to /ch/12/config/name
-(logger.main) 2024-09-26 11:18:20,262 --[DEBUG]-- Created a (Input = True) cmd running /ch/13/config/name
-(logger.main) 2024-09-26 11:18:20,263 --[DEBUG]-- Added listener to /ch/13/config/name
-(logger.main) 2024-09-26 11:18:20,263 --[DEBUG]-- Created a (Input = True) cmd running /ch/14/config/name
-(logger.main) 2024-09-26 11:18:20,263 --[DEBUG]-- Added listener to /ch/14/config/name
-(logger.main) 2024-09-26 11:18:20,263 --[DEBUG]-- Created a (Input = True) cmd running /ch/15/config/name
-(logger.main) 2024-09-26 11:18:20,263 --[DEBUG]-- Added listener to /ch/15/config/name
-(logger.main) 2024-09-26 11:18:20,263 --[DEBUG]-- Created a (Input = True) cmd running /ch/16/config/name
-(logger.main) 2024-09-26 11:18:20,263 --[DEBUG]-- Added listener to /ch/16/config/name
-(logger.main) 2024-09-26 11:18:20,264 --[INFO]-- Started tracking the value of Name for 16 channels
-(logger.main) 2024-09-26 11:18:20,274 --[INFO]-- Starting the keylogger
-(logger.main) 2024-09-26 11:18:37,355 --[DEBUG]-- sending command: ['/ch/01/config/name']
-(logger.main) 2024-09-26 11:18:37,355 --[DEBUG]-- Sending message of /ch/01/config/name with value None
-(logger.main) 2024-09-26 11:18:37,370 --[DEBUG]-- got b'/ch/01/config/name\x00\x00,s\x00\x00bob\x00' from ('192.168.1.1', 10024)
-(logger.main) 2024-09-26 11:18:41,804 --[DEBUG]-- sending command: ['/xinfo']
-(logger.main) 2024-09-26 11:18:41,804 --[DEBUG]-- Sending message of /xinfo with value None
-(logger.main) 2024-09-26 11:18:41,839 --[DEBUG]-- got b'/xinfo\x00\x00,ssss\x00\x00\x00192.168.1.1\x00Portable PIG PEN\x00\x00\x00\x00XR12\x00\x00\x00\x001.09\x00\x00\x00\x00' from ('192.168.1.1', 10024)
-(logger.main) 2024-09-26 11:18:43,800 --[INFO]-- Shutting down KeyLogger
+(logger.main) 2024-09-30 07:28:43,312 --[DEBUG]-- Initialized Logger
+(logger.main) 2024-09-30 07:28:43,312 --[DEBUG]-- Initializing config
+(logger.main) 2024-09-30 07:28:43,313 --[DEBUG]-- Config Initialized, Initializing Communications
+(logger.main) 2024-09-30 07:28:43,315 --[INFO]-- Starting server on 0.0.0.0:5005, (('0.0.0.0', 5005))
+(logger.main) 2024-09-30 07:28:43,318 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-30 07:28:43,323 --[INFO]-- Set up client server on ('0.0.0.0', 5005)
+(logger.main) 2024-09-30 07:28:43,338 --[DEBUG]-- Created a (Input = True) cmd running /*
+(logger.main) 2024-09-30 07:28:43,339 --[DEBUG]-- Added listener to /*
+(logger.main) 2024-09-30 07:28:43,339 --[DEBUG]-- Created a (Input = True) cmd running /xinfo
+(logger.main) 2024-09-30 07:28:43,339 --[DEBUG]-- Added listener to /xinfo
+(logger.main) 2024-09-30 07:28:43,339 --[DEBUG]-- Sending message of /xinfo with value None
+(logger.main) 2024-09-30 07:28:43,340 --[INFO]-- Initialized Communication Class, Starting on storage class
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Created a (Input = True) cmd running /ch/01/config/name
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Added listener to /ch/01/config/name
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Created a (Input = True) cmd running /ch/02/config/name
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Added listener to /ch/02/config/name
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Created a (Input = True) cmd running /ch/03/config/name
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Added listener to /ch/03/config/name
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Created a (Input = True) cmd running /ch/04/config/name
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Added listener to /ch/04/config/name
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Created a (Input = True) cmd running /ch/05/config/name
+(logger.main) 2024-09-30 07:28:43,341 --[DEBUG]-- Added listener to /ch/05/config/name
+(logger.main) 2024-09-30 07:28:43,342 --[DEBUG]-- Created a (Input = True) cmd running /ch/06/config/name
+(logger.main) 2024-09-30 07:28:43,342 --[DEBUG]-- Added listener to /ch/06/config/name
+(logger.main) 2024-09-30 07:28:43,342 --[DEBUG]-- Created a (Input = True) cmd running /ch/07/config/name
+(logger.main) 2024-09-30 07:28:43,342 --[DEBUG]-- Added listener to /ch/07/config/name
+(logger.main) 2024-09-30 07:28:43,342 --[DEBUG]-- Created a (Input = True) cmd running /ch/08/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Added listener to /ch/08/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Created a (Input = True) cmd running /ch/09/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Added listener to /ch/09/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Created a (Input = True) cmd running /ch/10/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Added listener to /ch/10/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Created a (Input = True) cmd running /ch/11/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Added listener to /ch/11/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Created a (Input = True) cmd running /ch/12/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Added listener to /ch/12/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Created a (Input = True) cmd running /ch/13/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Added listener to /ch/13/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Created a (Input = True) cmd running /ch/14/config/name
+(logger.main) 2024-09-30 07:28:43,343 --[DEBUG]-- Added listener to /ch/14/config/name
+(logger.main) 2024-09-30 07:28:43,344 --[DEBUG]-- Created a (Input = True) cmd running /ch/15/config/name
+(logger.main) 2024-09-30 07:28:43,344 --[DEBUG]-- Added listener to /ch/15/config/name
+(logger.main) 2024-09-30 07:28:43,344 --[DEBUG]-- Created a (Input = True) cmd running /ch/16/config/name
+(logger.main) 2024-09-30 07:28:43,344 --[DEBUG]-- Added listener to /ch/16/config/name
+(logger.main) 2024-09-30 07:28:43,344 --[INFO]-- Started tracking the value of Name for 16 channels
+(logger.main) 2024-09-30 07:28:43,345 --[INFO]-- Starting the keylogger
+(logger.main) 2024-09-30 07:28:48,234 --[INFO]-- Shutting down KeyLogger

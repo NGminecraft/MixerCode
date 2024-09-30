@@ -7,6 +7,7 @@ from config import Config
 import socket
 
 
+
 class Comms:
     def __init__(self, config: Config):
         self.logger = logging.getLogger("logger.main")
@@ -35,6 +36,8 @@ class Comms:
             
         async def start_event_loop():
             asyncio.get_event_loop().run_forever()
+            
+        
 
         self.logger.info(
             f"Starting server on {config.local_ip}:{config.local_port}, ({self.socket.getsockname()})"
@@ -46,9 +49,13 @@ class Comms:
         # Even though you technically shouldn't do this, I'm desperate
         self.client._sock = self.socket
         # starts the datagram, then kicks up the server
+        
         asyncio.get_event_loop().run_until_complete(create_server())
         self.logger.info(f"Set up client server on {self.client._sock.getsockname()}")
         start_event_loop()
+        
+        #asyncio.run(manual_listen())
+        
         
         
     def get_socket(self):
@@ -64,6 +71,17 @@ class Comms:
     def sendMessage(self, cmd, value=None):
         self.logger.debug(f"Sending message of {cmd} with value {value}")
         self.client.send_message(cmd, value)
+        
+    async def check_for_input(self):
+        while True:
+            try:
+                data, addr = self.get_socket().recvfrom(1024)
+                if data:
+                    self.logger.debug(f"got {data} from {addr}")
+                    self.mainDispatcher.call_handlers_for_packet(data, addr)
+            except BlockingIOError:
+                pass
+        self.socket.close()
 
 
 """

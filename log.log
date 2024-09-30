@@ -1,7 +1,7 @@
-(logger.main) 2024-09-26 11:18:20,150 --[INFO]-- Starting server on 0.0.0.0:5005, (('0.0.0.0', 5005))
-(logger.main) 2024-09-26 11:18:20,151 --[INFO]-- Started server, setting up client side
-(logger.main) 2024-09-26 11:18:20,157 --[INFO]-- Set up client server on ('0.0.0.0', 5005)
-(logger.main) 2024-09-26 11:18:20,217 --[INFO]-- Initialized Communication Class, Starting on storage class
-(logger.main) 2024-09-26 11:18:20,264 --[INFO]-- Started tracking the value of Name for 16 channels
-(logger.main) 2024-09-26 11:18:20,274 --[INFO]-- Starting the keylogger
-(logger.main) 2024-09-26 11:18:43,800 --[INFO]-- Shutting down KeyLogger
+(logger.main) 2024-09-30 07:28:43,315 --[INFO]-- Starting server on 0.0.0.0:5005, (('0.0.0.0', 5005))
+(logger.main) 2024-09-30 07:28:43,318 --[INFO]-- Started server, setting up client side
+(logger.main) 2024-09-30 07:28:43,323 --[INFO]-- Set up client server on ('0.0.0.0', 5005)
+(logger.main) 2024-09-30 07:28:43,340 --[INFO]-- Initialized Communication Class, Starting on storage class
+(logger.main) 2024-09-30 07:28:43,344 --[INFO]-- Started tracking the value of Name for 16 channels
+(logger.main) 2024-09-30 07:28:43,345 --[INFO]-- Starting the keylogger
+(logger.main) 2024-09-30 07:28:48,234 --[INFO]-- Shutting down KeyLogger
