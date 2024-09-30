@@ -51,6 +51,7 @@ def main():
     storageClass = Status(communicationClass)
     terminal = Terminal(storageClass, configClass)
     while True:
+        """ This may potentially be reading from the socket buffer before asyncio can get to it
         """
         try:
             data, addr = communicationClass.get_socket().recvfrom(1024)
@@ -58,6 +59,7 @@ def main():
                 logger.debug(f"got {data} from {addr}")
         except BlockingIOError:
             pass
+        """
             """ 
         terminal.update()
         sleep(0.1)
